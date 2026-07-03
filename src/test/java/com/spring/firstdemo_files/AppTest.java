@@ -1,4 +1,4 @@
-package SpringCore.FirstSpringApp;
+package com.spring.firstdemo_files;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
