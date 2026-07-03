@@ -1,4 +1,4 @@
-package SpringCore.FirstSpringApp;
+package com.spring.firstdemo_files;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,7 +19,7 @@ public class App {
 		
 		
 //		with IOC container
-		ApplicationContext ac = new ClassPathXmlApplicationContext("SpringCore/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
 		
 		A01 bean1 = ac.getBean("firstClass", A01.class);
 		System.out.println(bean1);
