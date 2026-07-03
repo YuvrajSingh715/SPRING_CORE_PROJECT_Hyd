@@ -1,4 +1,4 @@
-package SpringCore.ClassTask;
+package com.spring.classtaskD9;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,11 +11,11 @@ class BookManagement {
 	private int price;
 
 	public BookManagement() {
-		System.out.println("Book Details Initialization by Setter Injection");
+		System.out.println();
 	}
 
 	public BookManagement(int bookId, String bookName, String authorName, int price) {
-		System.out.println("Book Details Initialization by Constructor Injection");
+//		System.out.println("Book Details Initialization by Constructor Injection");
 		this.authorName = authorName;
 		this.bookId = bookId;
 		this.bookName = bookName;
@@ -54,7 +54,7 @@ public class BookManagementClient {
 
 	public static void main(String[] args) {
 		
-	ApplicationContext ac = new ClassPathXmlApplicationContext("SpringCore/config/application-context.xml");
+	ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
 	BookManagement bookManagement = ac.getBean("bookDetails", BookManagement.class);
 	bookManagement.showBookDetails();
 	

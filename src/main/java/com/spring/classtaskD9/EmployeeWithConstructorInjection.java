@@ -1,4 +1,4 @@
-package SpringCore.ClassTask;
+package com.spring.classtaskD9;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -28,7 +28,7 @@ public class EmployeeWithConstructorInjection {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("SpringCore/config/application-context.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
 		EmployeeC emp = context.getBean("employeeConstructor", EmployeeC.class);
 
 		emp.displayEmployee();

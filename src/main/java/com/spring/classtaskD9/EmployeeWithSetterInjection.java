@@ -1,4 +1,4 @@
-package SpringCore.ClassTask;
+package com.spring.classtaskD9;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -38,7 +38,7 @@ public class EmployeeWithSetterInjection {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext ac = new ClassPathXmlApplicationContext("SpringCore/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
 		EmployeeS emp = ac.getBean("employeeSetter", EmployeeS.class);
 		
 		emp.displayEmployee();
