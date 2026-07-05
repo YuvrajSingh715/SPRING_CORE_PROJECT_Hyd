@@ -18,6 +18,7 @@ public class StudentClient {
 		System.out.println(student1);
 		System.out.println(System.lineSeparator() + "\u001B[0m");
 		
+		
 //		Spring Approach
 		System.out.println("With spring approach");
 		System.out.println("-------------------->" +"\u001B[36m");
@@ -25,6 +26,7 @@ public class StudentClient {
 //		Student student2 = (Student) context.getBean("studentClass");
 		Student student2 = context.getBean("studentClass", Student.class);
 		System.out.println(student2);
+		
 	}
 
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- XML File for firstdemo_files, classtaskD9, classtaskD10 packages -->
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -15,7 +17,7 @@
 	<!-- <bean id = "secondClass" class = "com.spring.firstdemo_files.B01"></bean> --> 
   	
 
-	<!-- Bean for Student class -->
+	<!-- Bean for Student Client class -->
 	<!-- <bean id="studentClass" class="com.spring.firstdemo_files.Student">
 		Setter Injection 
 		<property name="id" value="87436"></property>
@@ -121,5 +123,6 @@
 	<property name="ProjectName" value="School Domain"></property>
 	<property name="Duration" value="6 Months"></property>
 	</bean>
+	
 	
 </beans>  
