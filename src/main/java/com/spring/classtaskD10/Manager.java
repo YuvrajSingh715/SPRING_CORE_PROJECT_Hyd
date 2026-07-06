@@ -25,7 +25,7 @@ public class Manager {
 	  public static void main(String[] args) {
 	  
 	  ApplicationContext ac = new
-	  ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+	  ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 	  Manager manager = ac.getBean("manager", Manager.class);
 	  System.out.println(manager);
 	  

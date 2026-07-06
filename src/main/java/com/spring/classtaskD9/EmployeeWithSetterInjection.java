@@ -38,7 +38,7 @@ public class EmployeeWithSetterInjection {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/classtaskD9/application-context.xml");
 		EmployeeS emp = ac.getBean("employeeSetter", EmployeeS.class);
 		
 		emp.displayEmployee();

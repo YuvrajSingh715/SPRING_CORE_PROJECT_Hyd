@@ -43,7 +43,7 @@ public class School {
 
 	public static void main(String[] args) {
 
-		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		Teacher td = ac.getBean("teacher", Teacher.class);
 		System.out.println(td);
 	}

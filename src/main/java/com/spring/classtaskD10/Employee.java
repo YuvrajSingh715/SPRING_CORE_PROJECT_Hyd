@@ -58,7 +58,7 @@ public class Employee {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		EmpDetails ed = ac.getBean("empDetails", EmpDetails.class);
 		System.out.println(ed);
 	}

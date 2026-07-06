@@ -26,7 +26,7 @@ public class Doctor {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext ap = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ap = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		Patient pd = ap.getBean("patient", Patient.class);
 		System.out.println(pd);
 		

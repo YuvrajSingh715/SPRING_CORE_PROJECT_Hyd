@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- List Collection Injection for Student class -->
+	<bean id="student" class="com.spring.collectionInjection.Student">
+		<property name="studentName">
+			<list>
+				<value>Yuvraj</value>
+				<value>Bhanu</value>
+				<value>Raghvendra</value>
+				<value>Rohit</value>
+				<value>Abhishek</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Set Collection Injection for Duration class -->
+	<bean id="duration"
+		class="com.spring.collectionInjection.Duration">
+		<property name="courseDuration">
+			<set>
+				<value>4 Months</value>
+				<value>5 Months</value>
+				<value>6 Months</value>
+				<value>6 Months</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<!-- Map Collection Injection for Course class -->
+	<bean id="course" class="com.spring.collectionInjection.Course">
+		<property name="courseInfo">
+			<map>
+				<entry key="Java" value="23451"></entry>
+				<entry key='Python' value='48924'></entry>
+				<entry key="GenAI" value="94348"></entry>
+				<entry key="DSA" value="43215"></entry>
+			</map>
+		</property>
+	</bean>
+
+
+	<!-- List and Map Collection Injection for Management class -->
+	<bean id="management"
+		class="com.spring.collectionInjection.Management">
+
+		<!-- List Collection Injection for Management class
+		 -> private List<Student> studentDetails; -->
+		<property name="studentDetails">
+			<list>
+				<ref bean="student" />
+			</list>
+		</property>
+
+		<!-- Map Collection Injection for Management class
+		 -> private Map<Duration, Course> courseDetails; -->
+		<property name="courseDetails">
+			<map>
+				<entry key-ref="duration" value-ref="course"></entry>
+			</map>
+		</property>
+	</bean>
+	
+	
+	<!-- Properties Collection Injection for CapGemini class -->
+	<bean id="capgemini" class="com.spring.collectionInjection.CapGemini">
+		<property name="Database">
+			<props>
+				<prop key="URL">jdbc:oracle:thin:@localhost:1521:xe</prop>
+				<prop key="User-Name">yuv321@raj</prop>
+				<prop key="Password">*******</prop>
+				<prop key="Driver-Name">oracle.jdbc.driver.OracleDriver</prop>
+			</props>
+		</property>
+    </bean>
+
+</beans>  

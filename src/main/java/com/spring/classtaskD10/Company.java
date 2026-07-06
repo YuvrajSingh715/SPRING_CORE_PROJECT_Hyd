@@ -63,7 +63,7 @@ public class Company {
 		  
 //		Spring Way
 		
-		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		Project pro = ac.getBean("project", Project.class);
 		System.out.println(pro);
 		

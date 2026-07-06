@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Setter Injection for EmployeeS class -->
+	<bean id="employeeSetter" class="com.spring.classtaskD9.EmployeeS">
+		<property name="employeeId" value="87636"></property>
+		<property name="employeeName" value="Hopper"></property>
+		<property name="employeeSalary" value="50543.32"></property>
+	</bean>
+
+
+	<!-- Consturctor Injection for EmployeeC class -->
+	<bean id="employeeConstructor"
+		class="com.spring.classtaskD9.EmployeeC">
+		<constructor-arg name="employeeId" value="32462"></constructor-arg>
+		<constructor-arg name="employeeName" value="Joyce"></constructor-arg>
+		<constructor-arg name="empoyeeSalary" value="67895.54"></constructor-arg>
+	</bean>
+
+
+	<!-- Setter Injection for Student class -->
+	<bean id="studentSetter" class="com.spring.classtaskD9.Student">
+		<property name="rollNumber" value="106"></property>
+		<property name="studentName" value="Jon Snow"></property>
+		<property name="course" value="Full Stack"></property>
+	</bean>
+
+
+	<!-- Setter and Constructor Injection for BookManagement class -->
+	<bean id="bookDetails" class="com.spring.classtaskD9.BookManagement">
+
+		<!-- Setter Injection -->
+		<!-- <property name="bookId" value="23"></property> 
+		<property name="bookName" value="Rich Habits"></property> 
+		<property name="authorName" value="Thomas C. Corley"></property> 
+		<property name="price" value="693"></property> -->
+		
+		<!-- Construction Injection -->
+		<constructor-arg name="bookId" value="31"></constructor-arg>
+		<constructor-arg name="bookName" value="Tomb of sand"></constructor-arg>
+		<constructor-arg name="authorName" value="Geetanjali shree"></constructor-arg>
+		<constructor-arg name="price" value="579"></constructor-arg>
+	</bean>
+
+</beans>
