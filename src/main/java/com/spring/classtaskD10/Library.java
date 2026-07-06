@@ -56,7 +56,7 @@ public class Library {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		BookDetails bd = ac.getBean("library" , BookDetails.class);
 		System.out.println(bd);
 		

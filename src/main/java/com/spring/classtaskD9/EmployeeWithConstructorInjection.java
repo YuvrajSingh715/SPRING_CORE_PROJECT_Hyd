@@ -28,7 +28,7 @@ public class EmployeeWithConstructorInjection {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/classtaskD9/application-context.xml");
 		EmployeeC emp = context.getBean("employeeConstructor", EmployeeC.class);
 
 		emp.displayEmployee();

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- Setter Injection for Library class -->
+	<!-- <bean id="library" class="com.spring.classtaskD10.BookDetails"> 
+	<property name="title" value="Adventure"></property> 
+	<property name="price" value="692"></property> 
+	<property name="pages" value="234"></property> 
+	</bean> -->
+	
+	
+	<!-- Setter Injection for EmpAddress class -->
+	<bean id="empAdd" class="com.spring.classtaskD10.EmpAddress">
+		<property name="city" value="Hyderabad"></property>
+		<property name="pincode" value="500027"></property>
+	</bean>
+	
+	<!-- Setter Injection for Employee class -->
+	<bean id="empDetails" class="com.spring.classtaskD10.EmpDetails">
+		<property name="name" value="Dustain"></property>
+		<property name="id" value="502"></property>
+		<property name="empAddress" ref="empAdd"></property>
+	</bean>
+	
+	
+	<!-- Constructor Injection for School class -->
+	<bean id="teacher" class="com.spring.classtaskD10.Teacher">
+		<constructor-arg value="Maths"></constructor-arg>
+		<constructor-arg value="2"></constructor-arg>
+	</bean>
+	
+	
+	<!-- Constructor Injection for Hospital class -->
+	<bean id="hospital" class="com.spring.classtaskD10.Hospital">
+		<constructor-arg name="doctorName" value="Dr. Santosh G Honavar"></constructor-arg>
+		<constructor-arg name="specialization" value="Eye specialists"></constructor-arg>
+	</bean>
+	
+	<!-- Constructor Injection for Doctor class -->
+	<bean id="patient" class="com.spring.classtaskD10.Patient">
+		<constructor-arg value="Max"></constructor-arg>
+		<constructor-arg value="18"></constructor-arg>
+		<constructor-arg ref="hospital"></constructor-arg>
+	</bean>
+	
+	
+	<!-- Constructor Injection for Manager class -->
+	<bean id="manager" class="com.spring.classtaskD10.Manager">
+		<constructor-arg value="Dean"></constructor-arg>
+		<constructor-arg value="Backend Developer"></constructor-arg>
+	</bean>
+	
+	<!-- Constructor and Setter Injection for Company class -->
+	<bean id="project" class="com.spring.classtaskD10.Project">
+		<constructor-arg name="manager" ref="manager"></constructor-arg>
+		<property name="ProjectName" value="School Domain"></property>
+		<property name="Duration" value="6 Months"></property>
+	</bean>
+
+</beans>

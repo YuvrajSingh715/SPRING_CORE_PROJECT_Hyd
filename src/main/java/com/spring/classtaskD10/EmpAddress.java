@@ -28,7 +28,7 @@ public class EmpAddress {
 	// This code is just for verification purposes, to check whether the values are
 	// injected into the variables or not
 	public static void main(String[] args) {
-		ApplicationContext ad = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ad = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		EmpAddress ea = ad.getBean("empAdd", EmpAddress.class);
 		System.out.println(ea);
 	}

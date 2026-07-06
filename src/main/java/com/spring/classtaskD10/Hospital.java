@@ -43,7 +43,7 @@ public class Hospital {
 	// injected into the variables or not
 	public static void main(String[] args) {
 
-		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/config/application-context.xml");
+		ApplicationContext ac = new ClassPathXmlApplicationContext("com/spring/classtaskD10/application-context.xml");
 		Hospital hosp = ac.getBean("hospital", Hospital.class);
 		System.out.println(hosp);
 
