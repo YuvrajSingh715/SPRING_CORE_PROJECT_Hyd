@@ -35,6 +35,14 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Source: https://projectlombok.org/setup/maven -->
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.46</version>
+		    <scope>provided</scope>
+	    </dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
