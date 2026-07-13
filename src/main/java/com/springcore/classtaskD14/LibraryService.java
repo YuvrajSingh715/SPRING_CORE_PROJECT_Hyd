@@ -1,4 +1,4 @@
-package com.spring.classtaskD14;
+package com.springcore.classtaskD14;
 
 import java.util.HashMap;
 import java.util.List;

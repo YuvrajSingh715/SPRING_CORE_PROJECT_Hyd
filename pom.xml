@@ -12,7 +12,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>21</maven.compiler.release>
 	</properties>
 
 	<dependencies>
@@ -35,13 +35,13 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Source: https://projectlombok.org/setup/maven -->
+		<!-- Source: https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <version>1.18.46</version>
-		    <scope>provided</scope>
-	    </dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.46</version>
+			<scope>compile</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

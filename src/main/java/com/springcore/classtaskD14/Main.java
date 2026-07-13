@@ -24,7 +24,7 @@ Ans- Bean existing in the container mean IOC container has created and stored it
 */
 
 
-package com.spring.classtaskD14;
+package com.springcore.classtaskD14;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -33,7 +33,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/classtaskD14/context.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/classtaskD14/context.xml");
 
 		LibraryService bean1 = context.getBean("libraryService", LibraryService.class);
 
