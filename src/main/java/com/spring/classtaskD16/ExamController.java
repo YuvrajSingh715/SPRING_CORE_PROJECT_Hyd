@@ -1,7 +1,7 @@
 package com.spring.classtaskD16;
 
 public class ExamController {
-	
+   
 	private String examName;
 	private int semester;
 	private String examCenter;

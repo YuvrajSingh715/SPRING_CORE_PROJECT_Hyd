@@ -11,7 +11,7 @@
 
 
 	<!-- bean for Library class -->
-	<bean id="library1" class="com.spring.classtaskD14.Library"
+	<bean id="library1" class="com.springcore.classtaskD14.Library"
 		init-method="init" destroy-method="destroy">
 		<property name="libraryName" value="Central City Library"></property>
 		<property name="inChargePerson" value="Brandan" />
@@ -28,7 +28,7 @@
 
 
 	<!-- bean for Library class -->
-	<bean id="library2" class="com.spring.classtaskD14.Library"
+	<bean id="library2" class="com.springcore.classtaskD14.Library"
 		init-method="init" destroy-method="destroy" autowire-candidate="false">
 		<property name="libraryName" value="Readers Paradise" />
 		<property name="inChargePerson" value="Brone James" />
@@ -45,7 +45,7 @@
 
 
 	<!-- bean for Library class -->
-	<bean id="library3" class="com.spring.classtaskD14.Library"
+	<bean id="library3" class="com.springcore.classtaskD14.Library"
 		init-method="init" destroy-method="destroy" autowire-candidate="false">
 		<property name="libraryName" value="Sunrise Library"></property>
 		<property name="inChargePerson" value="Jonsnow" />
@@ -63,7 +63,7 @@
 
 	<!-- bean for LibraryService class -->
 	<bean id="libraryService"
-		class="com.spring.classtaskD14.LibraryService" autowire="byType">
+		class="com.springcore.classtaskD14.LibraryService" autowire="byType">
 		<property name="details">
 			<set>
 				<ref bean="library1" />
