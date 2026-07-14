@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- bean for Hospital Class -->
+	<bean id="hospital1" class="com.springcore.practiceD14.Hospital"
+		init-method="init" destroy-method="destroy" autowire-candidate="false">
+		<property name="hospitalName" value="MagnAid Hospital"></property>
+		<property name="contectPersonName" value="John"></property>
+		<property name="contectPersonNumber" value="6732198650"></property>
+		<property name="treatment">
+			<set>
+				<value>Dental Treatment</value>
+				<value>Eye Examination</value>
+				<value>Orthopedic Treatment</value>
+				<value>Skin Treatment</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<!-- bean for Hospital Class -->
+	<bean id="hospital2" class="com.springcore.practiceD14.Hospital"
+		init-method="init" destroy-method="destroy" autowire-candidate="false">
+		<property name="hospitalName" value="Apollo Hospital"></property>
+		<property name="contectPersonName" value="peter"></property>
+		<property name="contectPersonNumber" value="8743298623"></property>
+		<property name="treatment">
+			<set>
+				<value>MRI Scan</value>
+				<value>X-Ray</value>
+				<value>Blood Test</value>
+				<value>ICU Care</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<!-- bean for Hospital Class -->
+	<bean id="hospital3" class="com.springcore.practiceD14.Hospital"
+		init-method="init" destroy-method="destroy" autowire-candidate="false">
+		<property name="hospitalName" value="Wellness Hospital"></property>
+		<property name="contectPersonName" value="Tommond"></property>
+		<property name="contectPersonNumber" value="8463862953"></property>
+		<property name="treatment">
+			<set>
+				<value>Heart Checkup</value>
+				<value>Dialysis</value>
+				<value>Surgery</value>
+				<value>CT Scan</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<!-- bean for HospitalService Class -->
+	<bean id="hospitalService"
+		class="com.springcore.practiceD14.HospitalService" autowire="byType">
+		<property name="data">
+			<list>
+				<ref bean="hospital1" />
+				<ref bean="hospital2" />
+				<ref bean="hospital3" />
+			</list>
+		</property>
+	</bean>
+
+</beans>  
+

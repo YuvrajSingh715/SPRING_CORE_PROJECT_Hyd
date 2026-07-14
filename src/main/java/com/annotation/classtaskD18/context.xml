@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!--==================================|FOR SETTER INJECTION|=====================================-->
+
+	<!-- Setter Injection for Department class -->
+	<!--<bean id="department" class="com.annotation.classtaskD18.Department">
+		<property name="departmentId" value="201"></property>
+		<property name="departmentName" value="QA Testing"></property>
+		<property name="departmentLocation" value="Bangluru"></property>
+	</bean>-->
+
+	<!-- Setter Injection for Employee class-->
+	<!--<bean id="employee" class="com.annotation.classtaskD18.Employee">
+		<property name="employeeId" value="101"></property>
+		<property name="employeeName" value="Thomas"></property>
+		<property name="employeeSalary" value="54432.89"></property>
+		<property name="department" ref="department"></property>
+	</bean>-->
+
+
+	<!--==============================|FOR CONSTRUCTOR INJECTION|====================================-->
+
+	<!-- Constructor Injection for Department class-->
+	<!--<bean id="department" class="com.annotation.classtaskD18.Department">
+		<constructor-arg name="departmentId" value="222"></constructor-arg>
+		<constructor-arg name="departmentName" value="Production"></constructor-arg>
+		<constructor-arg name="departmentLocation" value="Hyderabad"></constructor-arg>
+	</bean>-->
+
+	<!-- Constructor Injection for Department class-->
+	<!--<bean id="employee" class="com.annotation.classtaskD18.Employee">
+		<constructor-arg value="111"></constructor-arg>
+		<constructor-arg value="Brons"></constructor-arg>
+		<constructor-arg value="60645.54"></constructor-arg>
+		<constructor-arg ref="department"></constructor-arg>
+	</bean>-->
+
+
+	<!--==================================|FOR AUTOWIRE ByName|======================================-->
+
+	<!-- Bean for Department class -->
+	<!--<bean id="department" class="com.annotation.classtaskD18.Department">
+		<property name="departmentId" value="421"></property>
+		<property name="departmentName" value="Backend"></property>
+		<property name="departmentLocation" value="Pune"></property>
+	</bean>-->
+
+	<!-- Bean for Employee class-->
+	<!--<bean id="employee" class="com.annotation.classtaskD18.Employee"
+		autowire="byName">
+		<property name="employeeId" value="321"></property>
+		<property name="employeeName" value="Robert"></property>
+		<property name="employeeSalary" value="65321.21"></property>
+	</bean>-->
+
+
+	<!--==================================|FOR AUTOWIRE ByType|======================================-->
+
+	<!-- Bean for Department class -->
+	<bean id="department" class="com.annotation.classtaskD18.Department">
+		<property name="departmentId" value="257"></property>
+		<property name="departmentName" value="Frontent"></property>
+		<property name="departmentLocation" value="Noida"></property>
+	</bean>
+
+	<!-- Bean for Employee class-->
+	<bean id="employee" class="com.annotation.classtaskD18.Employee"
+		autowire="byType">
+		<property name="employeeId" value="157"></property>
+		<property name="employeeName" value="Teddy"></property>
+		<property name="employeeSalary" value="46245.54"></property>
+	</bean>
+
+
+</beans> 

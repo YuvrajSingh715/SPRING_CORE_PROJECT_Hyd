@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- bean for ConfigurationManager class -->
+	<bean id="configurationManager"
+		class="com.springcore.classtaskD16.ConfigurationManager" scope="singleton">
+		<property name="applicationName" value="ThunderX" />
+		<property name="environment" value="Dev" />
+	</bean>
+
+
+	<!-- bean for ExamController class -->
+	<bean id="examController"
+		class="com.springcore.classtaskD16.ExamController" scope="singleton">
+		<constructor-arg index="1" value="2"></constructor-arg>
+		<constructor-arg index="0" value="JPSF"></constructor-arg>
+		<constructor-arg index="2" value="Jurassic Park"></constructor-arg>
+	</bean>
+
+
+</beans>
