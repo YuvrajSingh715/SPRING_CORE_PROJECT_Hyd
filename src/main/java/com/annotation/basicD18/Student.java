@@ -1,9 +1,9 @@
 package com.annotation.basicD18;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Setter;
 
-@Data
+@Setter
 @AllArgsConstructor
 public class Student {
 
