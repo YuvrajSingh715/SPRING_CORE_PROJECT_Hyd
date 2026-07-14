@@ -1,4 +1,4 @@
-package com.spring.AnnotationD18;
+package com.annotation.basicD18;
 
 public record Employee(String name, int id, String address) {
 
