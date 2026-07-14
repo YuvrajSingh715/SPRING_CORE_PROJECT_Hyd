@@ -1,4 +1,4 @@
-package com.spring.AnnotationD18;
+package com.annotation.basicD18;
 
 public class ESTest {
 
