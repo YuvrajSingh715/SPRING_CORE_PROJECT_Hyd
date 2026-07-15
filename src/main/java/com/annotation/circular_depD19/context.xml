@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- ===================================Circular dependencies=================================== -->
+	<bean id="a" class="com.annotation.circular_depD19.A">
+		<property name="b" ref="b"></property>
+		<!-- <constructor-arg ref="b"></constructor-arg> -->
+	</bean>
+
+
+	<bean id="b" class="com.annotation.circular_depD19.B">
+		<property name="c" ref="c"></property>
+		<!-- <constructor-arg ref="c"></constructor-arg> -->
+	</bean>
+
+
+	<bean id="c" class="com.annotation.circular_depD19.C">
+		<property name="a" ref="a"></property>
+		<!-- <constructor-arg ref="a"></constructor-arg> -->
+	</bean>
+
+
+	<!-- ===================================Setter Injection=================================== -->
+
+	<bean id="course" class="com.annotation.circular_depD19.Course">
+		<property name="courseName" value="Hidden Telent"></property>
+	</bean>
+
+
+	<bean id="student" class="com.annotation.circular_depD19.Student">
+		<property name="course" ref="course"></property>
+	</bean>
+
+
+	<!-- this bean post processor is only for @required -->
+	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"> 
+		</bean> -->
+
+	<!-- this bean post processor is for Common annotations -->
+	<context:annotation-config></context:annotation-config>
+
+</beans>  
