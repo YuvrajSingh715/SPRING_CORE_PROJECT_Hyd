@@ -23,6 +23,8 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>6.2.18</version>
+			<!-- <version>5.0.20.RELEASE</version> -->
+			<!--Only for @required annotation coz it works with less than 6 version-->
 			<scope>compile</scope>
 		</dependency>
 
@@ -32,6 +34,8 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>6.2.18</version>
+			<!-- <version>5.0.20.RELEASE</version> -->
+			<!--Only for @required annotation coz it works with less than 6 version-->
 			<scope>compile</scope>
 		</dependency>
 
