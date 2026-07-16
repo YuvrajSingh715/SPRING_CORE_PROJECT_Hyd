@@ -11,18 +11,35 @@
 
 
 	<!-- bean for Department class -->
-	<bean id="department"
+	<bean id="departmentX"
 		class="com.annotation.autowireD20.Department">
-		<property name="departmentName" value="Full Stack"></property>
+		<property name="departmentName" value="Full-Stack"></property>
 	</bean>
+	<bean id="departmentY"
+		class="com.annotation.autowireD20.Department">
+		<property name="departmentName" value="DevOps">
+		</property>
+	</bean>
+
+
+	<!-- bean for Manager class -->
+	<bean id="managerX" class="com.annotation.autowireD20.Manager">
+		<property name="managerName" value="Sofia Romano"></property>
+	</bean>
+	<bean id="managerY" class="com.annotation.autowireD20.Manager">
+		<property name="managerName" value="Amelia Foster"></property>
+	</bean>
+
 
 	<!-- bean for Employee class -->
 	<bean id="employee" class="com.annotation.autowireD20.Employee">
-		<!-- <property name="department" ref="department"></property> -->
+		<!-- <property name="department" ref="department"></property> <property 
+			name="managerName" ref="manager"></property> -->
 	</bean>
 
 
-	<!-- this is bean post processor. it works as a mediator. without this annotation will not work -->
+	<!-- this is bean post processor. it works as a mediator. without this annotation 
+		will not work -->
 	<context:annotation-config />
 
 </beans>  
