@@ -1,31 +1,60 @@
 package com.annotation.autowireD20;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 
+	@Autowired(required = false)
+	@Qualifier("departmentX")
+//	@Qualifier("mangerY")
 	private Department department;
 
-	/*
-	 * public Employee() {
-	 * System.out.println("Employee class object by default constructor"); }
-	 */
-	 
-	
-//	@Autowired(required = true)
-	public Employee(Department department) {
-		System.out.println("Employee class object by parameterize constructor");
+	@Autowired(required = false)
+	@Qualifier("mangerY")
+//	@Qualifier("departmentX")
+	private Manager manager;
+
+	public Employee() {
+		System.out.println("Employee class object by default constructor");
+	}
+
+//	@Autowired(required = false)
+	public Employee(@Qualifier("departmentY") Department department, @Qualifier("managerX") Manager manager) {
+		System.out.println("Employee Object Created");
+		this.department = department;
+		this.manager = manager;
+	}
+
+//	@Autowired(required = false)
+	public Employee(@Qualifier("departmentY") Department department) {
+		System.out.println("Department Object Created");
 		this.department = department;
 	}
 
-//	@Autowired(required = true)
+//	@Autowired(required = false)
+	public Employee(@Qualifier("managerX") Manager manager) {
+		System.out.println("Manager Object Created");
+		this.manager = manager;
+	}
+
+//	@Autowired(required = false)
+//	@Qualifier("departmentY")       //work with required true&false --->>> we will get value coz type matched default constructor need
+//	@Qualifier("managerY")          //work with required false --->>> we will get value null coz type not matched default constructor need
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
+//	@Autowired(required = false)
+//	@Qualifier("managerY")          //work with required true&false --->>> we will get value coz type matched default constructor need
+//	@Qualifier("departmentY")       //work with required false --->>> we will get value null coz type not matched default constructor need
+	public void setManager(Manager manager) {
+		this.manager = manager;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee {Department: " + department + "}";
+		return "Employee Details [Department=" + department + ", Manager=" + manager + "]";
 	}
 
 }

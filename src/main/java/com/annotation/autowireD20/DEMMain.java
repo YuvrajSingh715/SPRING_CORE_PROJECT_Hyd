@@ -3,9 +3,9 @@ package com.annotation.autowireD20;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class DEMain {
+public class DEMMain {
 
-	public static void main(String[] args) {
+	 public static void main(String[] args) {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/annotation/autowireD20/context.xml");
 
@@ -14,4 +14,5 @@ public class DEMain {
 		System.out.println(emp);
 
 	}
+	
 }
