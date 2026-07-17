@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+ 
+                     <!-- I Want Classes Bean without using the XML file -->
+
+	 <!-- Bean for Menu class 
+	<bean id="menu" class="com.annotation.stereotypeD22.Menu">
+		<property name="dishesNameAndPrice">
+			<map>
+				<entry key="Pizza" value="₹250" />
+				<entry key="Burger" value="₹150" />
+				<entry key="Pasta" value="₹220" />
+				<entry key="Biryani" value="₹300" />
+				<entry key="Momos" value="₹120" />
+			</map>
+		</property>
+	</bean>
+
+
+	Bean for Order class
+	<bean id="order" class="com.annotation.stereotypeD22.Order">
+		<property name="dishName">
+			<list>
+				<value>pizza</value>
+				<value>burger</value>
+			</list>
+		</property>
+	</bean>
+
+
+	Bean for Restaurant class
+	<bean id="restaurant" class="com.annotation.stereotypeD22.Restaurant">
+	</bean>
+	
+	
+	Bean Post Processor
+	<context:annotation-config></context:annotation-config>  -->
+	
+	
+	
+	<!-- without creating the bean i want bean -->
+	<!-- <context:component-scan base-package="com.annotation.stereotypeD22"></context:component-scan> -->
+
+</beans>  

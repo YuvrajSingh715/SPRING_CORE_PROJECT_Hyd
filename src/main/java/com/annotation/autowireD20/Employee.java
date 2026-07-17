@@ -5,12 +5,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 
-	@Autowired(required = false)
+//	@Autowired(required = false)
 	@Qualifier("departmentX")
 //	@Qualifier("mangerY")
 	private Department department;
 
-	@Autowired(required = false)
+//	@Autowired(required = false)
 	@Qualifier("mangerY")
 //	@Qualifier("departmentX")
 	private Manager manager;
