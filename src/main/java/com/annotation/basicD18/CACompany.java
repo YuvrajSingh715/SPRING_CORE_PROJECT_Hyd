@@ -16,11 +16,11 @@ public class CACompany {
 
 	public static void main(String[] args) {
 
-		// Annotation attributes can be written in an order
+		// In this way we cannot read the content of the annotation
 		CACompany cac = new CACompany();
 		System.out.println("String hashCode: " + cac); // give the hashCode in a string from
 		System.out.println("Integer hashCode: " + cac.hashCode()); // give the hashCode in a Integer from
-		
+		System.out.print("" + System.lineSeparator());
 		
 		// Annotation attributes can be written in an order
 		Class<CACompany> ref = CACompany.class;

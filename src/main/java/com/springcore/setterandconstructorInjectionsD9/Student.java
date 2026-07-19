@@ -5,15 +5,17 @@ public class Student {
 	private int id;
 	private String name;
 	private String city;
+	private IDCard idCard;
 
 	public Student() {
 		System.out.println("Student class default constructor called");
 	}
-	
-	public Student(int id, String name, String city) {
+
+	public Student(int id, String name, String city, IDCard idCard) {
 		System.out.println("Student class parameterized constructor called");
 		this.id = id;
 		this.name = name;
+		this.idCard = idCard;
 		this.city = city;
 	}
 
@@ -32,22 +34,13 @@ public class Student {
 		this.city = city;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getCity() {
-		return city;
+	public void setIdCard(IDCard idCard) {
+		this.idCard = idCard;
 	}
 
 	@Override
 	public String toString() {
-		System.out.println("toString method called");
-		return "Student {ID = " + id + ", NAME = " + name + ", CITY = " + city + "}";
+		return "Student [id=" + id + ", name=" + name + ", city=" + city + ", idCard=" + idCard + "]";
 	}
 
 }

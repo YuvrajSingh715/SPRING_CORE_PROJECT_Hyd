@@ -21,11 +21,11 @@
           
           
            <!-- Constructor Injection for Transmission class -->
-           <bean id="transmission" class="com.springcore.beanautowiringD11.Transmission" autowire-candidate="false">
+           <bean id="transmission" class="com.springcore.beanautowiringD11.Transmission">
            <constructor-arg value="Automatic"/>
            <constructor-arg value="7"/> 
            </bean>
-           <bean id="transmission1" class="com.springcore.beanautowiringD11.Transmission" autowire-candidate="false">
+           <bean id="transmission1" class="com.springcore.beanautowiringD11.Transmission"  autowire-candidate="false">
            <constructor-arg value="manually"/>
            <constructor-arg value="8"/>
            </bean>
@@ -34,20 +34,23 @@
            <!-- autowiring of car class by byName mode -->
            <bean id="car" class="com.springcore.beanautowiringD11.Car" autowire="byName">
            <property name="CarName" value="Audi" />
+           <!-- <constructor-arg value="BMW"/> -->
            <!-- now it will automatically happened by byName autowire ↩
            <property name="Engine" ref="engine" /> -->
            </bean>
            
            <!-- autowiring of car class by bytype mode -->
-           <!-- <bean id="car" class="com.springcore.beanautowiringD11.Car" autowire="byType">
-           <property name="carName" value="Bugatti"></property>
-           now it will automatically happened by byType autowire ↩
-           <property name="Engine" ref="engine" /> 
-           </bean> -->
+           <!-- <bean id="car" class="com.springcore.beanautowiringD11.Car" autowire="byType"> -->
+           <!-- <property name="carName" value="Bugatti"></property> -->
+           <!-- <constructor-arg value="Mustange"/> -->
+           <!-- now it will automatically happened by byType autowire ↩
+           <property name="Engine" ref="engine" /> --> 
+          <!-- </bean> -->
            
            <!-- autowiring of car class by constructor mode -->
            <!-- <bean id="car" class="com.springcore.beanautowiringD11.Car" autowire="constructor">
            <property name="carName" value="Bugatti"/>
+           <constructor-arg value="Mustange"/>
            </bean> -->
            
 </beans>

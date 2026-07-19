@@ -10,18 +10,35 @@ public class Car {
 	private Transmission transmission;
 
 	public Car() {
-		System.out.println("0 param constructor");
+		System.out.println("0 param constructor {default constructor}");
+	}
+	
+	public Car(String carName) {
+		System.out.println("1 param constructor {carName}");
+		this.carName = carName;
 	}
 
 	public Car(Engine engine) {
-		System.out.println("1 param constructor");
+		System.out.println("1 param constructor {engine}");
 		this.engine = engine;
+	}
+	
+	public Car(Transmission transmission) {
+		System.out.println("1 param constructor {transmission}");
+		this.transmission = transmission;
 	}
 
 	public Car(Engine engine, Transmission transmission) {
-		System.out.println("2 param constructor");
+		System.out.println("2 param constructor {engine, transmission}");
 		this.transmission = transmission;
 		this.engine = engine;
+	}
+
+	public Car(String carName, Engine engine, Transmission transmission) {
+		System.out.println("3 param constructor {carName, engine, transmission}");
+		this.carName = carName;
+		this.engine = engine;
+		this.transmission = transmission;
 	}
 
 	public void setTransmission(Transmission transmission) {
