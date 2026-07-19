@@ -16,17 +16,33 @@
 	<!-- <bean id = "secondClass" class = "com.springcore.setterandconstructorInjectionsD9.B01"></bean> -->
 
 
+	<!-- Bean for IDCard class -->
+	<bean id="idCard"
+		class="com.springcore.setterandconstructorInjectionsD9.IDCard">
+		<!-- Setter Injection -->
+		<property name="schoolCode" value="WP21360"></property>
+		<property name="standard" value="10th"></property>
+
+		<!-- Constructor Injection  -->
+		<!-- <constructor-arg name="schoolCode" value= "EB42312"></constructor-arg> 
+		<constructor-arg name="standard" value= "11th"></constructor-arg> -->
+	</bean>
+
+
 	<!-- Bean for Student Client class -->
-	<bean id="studentClass" class="com.springcore.setterandconstructorInjectionsD9.Student"> 
-		<!-- Setter Injection --> 
-		<property name="id" value="87436"></property> 
-		<property name="name" value="Sansa"></property> 
-		<property name="city" value="Noida" ></property> 
-		
-		<!-- Constructor Injection 
-		<constructor-arg name="id" value= "32462"></constructor-arg> 
+	<bean id="studentClass"
+		class="com.springcore.setterandconstructorInjectionsD9.Student">
+		<!-- Setter Injection -->
+		<property name='id' value='87436'></property>
+		<property name="Name" value="Sansa"></property>
+		<property name="City" value="Noida"></property>
+		<property name="idCard" ref='idCard'></property>
+
+		<!-- Constructor Injection -->
+		<!-- <constructor-arg name="id" value= "32462"></constructor-arg> 
 		<constructor-arg name="name" value= "Nova"></constructor-arg> 
-		<constructor-arg name="city" value= "Nagpur"></constructor-arg> -->
-		</bean> 
+		<constructor-arg name="city" value= "Nagpur"></constructor-arg> 
+		<constructor-arg name="idCard" ref= "idCard"></constructor-arg>  -->
+	</bean>
 
 </beans>
