@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- this tag for normal annotations {@Autowire, @Qualifier, @Required} 
+		<context:annotation-config></context:annotation-config> -->
+
+
+	<!-- this tag is for read the value from application.propertes and initialize 
+		the value inside the fields by XML configuration file -->
+	<!-- <util:properties id="myprops"
+		location="classpath:com/annotation/propertyfileD23/application.properties"></util:properties> -->
+
+
+	<!-- this tag for stereo type annotations{@Component, @Service, @Reposetory, 
+		@Controller, @RestController} -->
+	<!-- <context:component-scan
+		base-package="com.annotation.propertyfileD23"></context:component-scan> -->
+
+	<!-- context:component-scan internally imports all type of Bean Post Processor -->
+
+</beans>  
