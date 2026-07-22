@@ -7,7 +7,7 @@ public class EmployeeTest {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext context = new AnnotationConfigApplicationContext("com.annotation.classtaskD23");
+		ApplicationContext context = new AnnotationConfigApplicationContext("com/annotation/classtaskD23");
 
 		Employee emp = context.getBean("employee", Employee.class);
 		
